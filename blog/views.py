@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Post
 
 # Create your views here.
@@ -7,6 +6,10 @@ class PostList(ListView):
     model = Post
     ordering = '-pk'
     # template_name = 'blog/post_list.html'
+
+class PostDetail(DetailView):
+    model = Post
+
     
 # FBV 형식으로 구현할 때 사용한 코드
 # def index(request):
