@@ -9,7 +9,7 @@ def index(request):
         request,
         'blog/index.html',
         {
-            'posts':posts,
+            'posts': posts,
         }
     )
 
@@ -20,6 +20,6 @@ def single_post_page(request, pk):
         request,
         'blog/single_post_page.html',
         {
-            'post':post,
+            'post': post,
         }
     )
